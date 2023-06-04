@@ -1,0 +1,28 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+>
+<Dialog title="add employee" id="sob" >
+    <f:SimpleForm>
+        <f:content>
+            <Label text="First Name" />
+            <Input type="Text" value="{formModel>/LastName}"/>
+            <Label text="Last Name" />
+            <Input type="Text" value="{formModel>/FirstName}"/>
+            <Label text="Title" />
+            <Input type="Text" value="{formModel>/Title}"/>
+            <Button text="Add" press="addEmployee"/>
+            <Button text="Close" press="closeOnPress"/>
+            <VBox ></VBox>
+        </f:content>
+    </f:SimpleForm>
+</Dialog>
+
+
+
+
+
+</c:FragmentDefinition>
