@@ -1,0 +1,22 @@
+<mvc:View controllerName="testfunction.controller.home" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+    <Page title="{i18n>title}">
+        <Table id="idProductsTable" inset="false" items="{
+                    path: 'model1>/items',factory: '.createColumnListItem'
+                }">
+        <columns>
+            <Column
+                width="12em">
+                <Text text="Product Name" />
+            </Column>
+            <Column>
+                        <Text text="ID" />
+                    </Column>
+                    <Column>
+                        
+                        <Text text="Price" />
+                    </Column>
+        </columns>
+        
+    </Table>
+    </Page>
+</mvc:View>
