@@ -48,6 +48,8 @@ sap.ui.define(
 
       createColumnListItem: function (sId, oContext) {
         return new sap.m.ColumnListItem({
+          type: "Navigation",
+          press: this.onNav.bind(this),
           cells: [
             new sap.m.Text({
               text: "{model1>ProductName}",
@@ -98,6 +100,14 @@ sap.ui.define(
         // }
 
         // return oColumnListItem;
+      },
+      onNav: function (e) {
+        console.log("mannaggia a ******");
+
+        const oSource = e.getSource();
+        const oContext = oSource.getBindingContext("model1");
+        const categoryID = oContext.getProperty("CategoryID");
+        this.getRouter().navTo("SecondPage", { id: categoryID });
       },
     });
   }

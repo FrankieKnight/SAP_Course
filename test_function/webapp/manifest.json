@@ -97,6 +97,11 @@
           "name": "Routehome",
           "pattern": ":?query:",
           "target": ["Targethome"]
+        },
+        {
+          "name": "SecondPage",
+          "pattern": "{id}",
+          "target": ["SecondPageTarget"]
         }
       ],
       "targets": {
@@ -106,6 +111,11 @@
           "clearControlAggregation": false,
           "viewId": "home",
           "viewName": "home"
+        },
+        "SecondPageTarget": {
+          "viewId": "SecondPage",
+          "viewType": "XML",
+          "viewName": "SecondPage"
         }
       }
     },
